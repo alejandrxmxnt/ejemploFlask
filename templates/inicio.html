@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio</title>
+  <meta name="description" content="Diseño y desarrollo web claro, rápido y fácil de mantener.">
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <div class="contenedor cabecera__fila">
+      <a class="marca" href="index.html" aria-label="Brújula Studio, ir al inicio"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1f3a5f"/><circle cx="20" cy="20" r="13" fill="none" stroke="#14959b" stroke-width="2"/><path d="M20 7l4.5 13L20 33l-4.5-13z" fill="#ffb84d" transform="rotate(38 20 20)"/><circle cx="20" cy="20" r="2.2" fill="#fff"/></svg>Brújula Studio</a>
+      <button class="menu-boton" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span></button>
+      <ul class="menu" id="menu">
+        <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
+        <!--<li><a href="nosotros.html">Nosotros</a></li>-->
+        <li><a href="{{ url_for('servicios') }}">Servicios</a></li>
+        <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+        <!--<li><a class="boton" href="contacto.html">Pedir cotización</a></li>-->
+      </ul>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="contenedor hero__rejilla">
+        <div>
+          <h1>Mi sitio web</h1>
+          <p class="hero__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="hero__acciones">
+            <a class="boton" href="{{ url_for('contacto') }}">Pedir cotización</a>
+            <a class="boton boton--claro" href="{{ url_for('servicios') }}">Ver servicios</a>
+          </div>
+        </div>
+        <svg class="brujula" viewBox="0 0 400 400" role="img" aria-label="Ilustración de una brújula">
+          <circle cx="200" cy="200" r="190" fill="#1f3a5f"/>
+          <circle cx="200" cy="200" r="160" fill="#f7f9fc"/>
+          <circle cx="200" cy="200" r="160" fill="none" stroke="#14959b" stroke-width="4"/>
+          <circle cx="200" cy="200" r="118" fill="none" stroke="#d5dee9" stroke-width="2" stroke-dasharray="3 9"/>
+          <g font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="24" fill="#1f3a5f" text-anchor="middle">
+            <text x="200" y="62">N</text><text x="342" y="209">E</text><text x="200" y="352">S</text><text x="58" y="209">O</text>
+          </g>
+          <g class="brujula__aguja">
+            <path d="M200 70 L222 200 L178 200 Z" fill="#ffb84d"/>
+            <path d="M200 330 L222 200 L178 200 Z" fill="#1f3a5f"/>
+          </g>
+          <circle cx="200" cy="200" r="11" fill="#14959b" stroke="#fff" stroke-width="4"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="seccion seccion--niebla">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <h2>Lo que hacemos</h2>
+          <p>Tres servicios, bien hechos y explicados sin tecnicismos.</p>
+        </div>
+        <div class="lista-servicios">
+          <article class="servicio-mini">
+            <h3>Diseño web</h3>
+            <p>Páginas que se ven bien en el celular, el tablet y el computador, con tu identidad.</p>
+            <a class="enlace-flecha" href="{{ url_for('servicios') }}">Ver detalle →</a>
+          </article>
+          <article class="servicio-mini">
+            <h3>Tiendas en línea</h3>
+            <p>Catálogo, carrito y medios de pago para que vendas sin depender de nadie.</p>
+            <a class="enlace-flecha" href="{{ url_for('servicios') }}">Ver detalle →</a>
+          </article>
+          <article class="servicio-mini">
+            <h3>Mantención</h3>
+            <p>Actualizamos contenido, corregimos errores y cuidamos la velocidad de tu sitio.</p>
+            <a class="enlace-flecha" href="{{ url_for('servicios') }}">Ver detalle →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <h2>Cómo trabajamos</h2>
+          <p>Un proceso corto, con entregas que puedes ver y probar en cada etapa.</p>
+        </div>
+        <ol class="pasos">
+          <li><h3>Conversamos</h3><p>Entendemos tu negocio, a tus clientes y lo que quieres lograr.</p></li>
+          <li><h3>Diseñamos</h3><p>Te mostramos una maqueta para que opines antes de programar.</p></li>
+          <li><h3>Construimos</h3><p>Programamos el sitio y lo probamos en distintos dispositivos.</p></li>
+          <li><h3>Publicamos</h3><p>Lo ponemos en línea y te enseñamos a usarlo.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="banda">
+          <div>
+            <h2>¿Tienes un proyecto en mente?</h2>
+            <p>Cuéntanos qué necesitas y te respondemos con una propuesta en 24 horas.</p>
+          </div>
+          <a class="boton boton--sol" href="{{ url_for('contacto') }}">Hablemos</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__rejilla">
+        <div>
+          <a class="marca" href="{{ url_for('inicio') }}"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1f3a5f"/><circle cx="20" cy="20" r="13" fill="none" stroke="#14959b" stroke-width="2"/><path d="M20 7l4.5 13L20 33l-4.5-13z" fill="#ffb84d" transform="rotate(38 20 20)"/><circle cx="20" cy="20" r="2.2" fill="#fff"/></svg>Brújula Studio</a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut laoreet tincidunt, nunc nisl aliquam nunc, eget aliquam nisl nunc eget nunc.
+          </p>
+        </div>
+        <div>
+          <h3>Páginas</h3>
+          <ul>
+            <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
+            <!--<li><a href="{{ url_for('nosotros') }}">Nosotros</a></li>-->
+            <li><a href="{{ url_for('servicios') }}">Servicios</a></li>
+            <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Escríbenos</h3>
+          <ul>
+            <li><a href="mailto:adrian@gmail.com">adrian@gmail.com</a></li>
+            <li>+591 1234 5678</li>
+            <li>Lunes a viernes, 9:00 a 18:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pie__legal"><p>© <span data-anio>2026</span> Mi sitio web.</p></div>
+    </div>
+  </footer>
+
+  <button class="subir" aria-label="Volver arriba">↑</button>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
